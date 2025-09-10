@@ -8,6 +8,7 @@ let passOneEl = document.getElementById('passOne')
 let passTwoEl = document.getElementById('passTwo')
 let buttonEl = document.querySelector('button')
 let passwordGen = ""
+let statusMessage = document.getElementById('status-message')
 
 function generateRandomCharacter(type) {
     let randomIndex = Math.floor(Math.random() * type.length)
@@ -46,7 +47,8 @@ function generatePasswordBlock() {
 
 }
 
-// Event after button is clicked
+// Event after button is clicked:
+// Generate Passwords
 buttonEl.addEventListener('click', function() {
     generatePasswordBlock()    
     passOneEl.textContent = passwordGen
@@ -55,5 +57,24 @@ buttonEl.addEventListener('click', function() {
     passTwoEl.textContent = passwordGen
 })
 
-
+//Copy to clipboard option one:
+passOneEl.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(passOneEl.textContent);
+        statusMessage.textContent = "Text copied to clipboard!";
+      } catch (err) {
+        statusMessage.textContent = "Failed to copy text.";
+        console.error("Error copying text: ", err);
+      }
+    });
+//Copy to clipboard option two:
+passTwoEl.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(passTwoEl.textContent);
+        statusMessage.textContent = "Text copied to clipboard!";
+      } catch (err) {
+        statusMessage.textContent = "Failed to copy text.";
+        console.error("Error copying text: ", err);
+      }
+    });
 
