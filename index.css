@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 span {
+    display: block;
+    color: #4ADF86;
+
+}
+
+button {
+    background-color: #4ADF86;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    color: inherit;
+    margin-top: 50px;
+}
+
+hr {
+    margin: 30px auto;
+    border: 1px solid #273549;
+}
+
+.results {
+    display: flex;
+    gap: 50px;
+}
+
+.results div {
+    width: 200px;
+    height: 40px;
+    background-color: #273549;
+}
