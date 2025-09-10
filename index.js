@@ -71,10 +71,10 @@ passOneEl.addEventListener('click', async () => {
 passTwoEl.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(passTwoEl.textContent);
-        statusMessage.textContent = "Text copied to clipboard!";
+        statusMessage.textContent = "Password copied to clipboard!";
       } catch (err) {
-        statusMessage.textContent = "Failed to copy text.";
-        console.error("Error copying text: ", err);
+        statusMessage.textContent = "Failed to copy password.";
+        console.error("Error copying password: ", err);
       }
     });
 
