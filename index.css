@@ -41,3 +41,7 @@ hr {
     justify-content: center;
     align-items: center;
 }
+
+#status-message {
+    text-align: center;
+}
